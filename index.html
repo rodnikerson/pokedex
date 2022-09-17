@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <img src="./my-logo.jpg" id="myLogo" alt="logo">
+    <div class="main-container" id="mainCont">
+        <div class="info-container">
+            <button id="btn-image-changer">&#8630;</button>
+            <img id="pokemon-photo" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon">
+            <div class="type-container" id="type-list">
+                <span class="type grass">GRASS</span>
+                <span class="type poison">POISON</span>
+            </div>
+            <div class="stats-container" id="statsCont">
+                <span>HP</span><span id="hpId">45</span>
+                <span>ATTACK</span><span id="attackId">49</span>
+                <span>DEFENSE</span><span id="defenseId">49</span>
+                <span>SPECIAL ATTACK</span><span id="spAttackId">65</span>
+                <span>SPECIAL DEFENSE</span><span id="spDefenseId">65</span>
+                <span id="speedGambiarra">SPEED</span><span id="speedId">45</span>
+            </div>
+            <div class="light-container" id="pokeballDarkMode">
+                <img id="imgPokeballDarkMode" src="pokeball.svg" alt="pokeball">
+            </div>
+        </div>
+        <div class="name-list-container" id="pokemon-list">
+            <div class="search-container">
+                <input type="text" id="pokemon-search" placeholder="Search a pokemon by name or id">
+                <img id="search-svg" src="search.svg">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

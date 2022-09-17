@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Acme', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    background: linear-gradient(to right, #FFE259, #FFA751);
+    /* background: linear-gradient(to left, #16222A, #3A6073); */
+}
+
+#myLogo {
+    width: 250px;
+    height: 86px;
+    position: absolute;
+    left: calc(50% - 125px);
+    bottom: 5px;
+    filter: drop-shadow(1px 1px 1px darkblue);
+}
+
+.main-container {
+    height: 460px;
+    width: 600px;
+    display: flex;
+    border: 5px solid #588218;
+    background-image: url(./pokemon-background.jpg);
+    position: relative;
+    /* background-image: url(./pokemon-background-dark.jpg); */
+}
+
+.info-container, .name-list-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.info-container {
+    width: 60%;
+    position: relative;
+}
+
+.name-list-container {
+    background-color: transparent;
+    width: 45%;
+}
+
+.search-container {
+    width: 100%;
+    margin-top: -5px;
+}
+
+#btn-image-changer {
+    position: absolute;
+    top: 80px;
+    right: 75px;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    rotate: 45deg;
+    border: none;
+    background-color: transparent;
+    color: darkblue;
+    /* color: #C0C0C0; */
+    text-align: right;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#pokemon-photo {
+    width: 150px;
+    margin-bottom: -50px;
+}
+
+.name-list-container > p {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: darkblue;
+}
+
+.name-list-container > p:hover {
+    /* color: darkblue; */
+    /* color: #C0C0C0; */
+    transform: scale(1.075);
+    border: 1px solid darkblue;
+    /* border: 1px solid #C0C0C0; */
+    background-color: transparent;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 7.5fr 1fr;
+    justify-content: space-evenly;
+    width: 200px;
+    margin-top: 40px;
+    color: midnightblue;
+}
+
+.stats-container > span {
+    border-bottom: 1px solid darkblue;
+}
+
+#speedGambiarra, #speedId {
+    border-bottom: none;
+}
+
+#hpId, #attackId, #defenseId, #spAttackId, #spDefenseId {
+    text-align: center;
+    border-left: 1px solid darkblue;
+}
+
+#speedId {
+    text-align: center;
+    border-left: 1px solid darkblue;
+}
+
+.type-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10%;
+}
+
+.type {
+    font-size: 1.1rem;
+    width: 100px;
+    text-align: center;
+}
+
+/* 
+POKEMON TYPES
+Normal, Fire, Water, Grass,
+Electric, Ice, Fighting, Poison,
+Ground, Flying, Psychic, Bug, Rock,
+Ghost, Steel, Fairy and Dragon
+*/
+
+.normal {
+    background-color: #898989;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.fire {
+    background-color: #FF8C00;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.water {
+    background-color: #00BFFF;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.grass {
+    background-color: #7CFC00;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.electric {
+    background-color: #FFFF00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 35px;
+}
+
+.ice {
+    background-color: #00FFFF;
+    color: black;
+    border: 1px solid black;
+    border-radius: 35px;
+}
+
+.fighting {
+    background-color: #DC143C;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.poison {
+    background-color: #BA55D3;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.ground {
+    background-color: #EEE8AA;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.flying {
+    background-color: #9370DB;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.psychic {
+    background-color: #FF69B4;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.bug {
+    background-color: #6B8E23;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.rock {
+    background-color: #BDB76B;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.ghost {
+    background-color: #9400D3;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.dragon {
+    background-color: #7B68EE;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.fairy {
+    background-color: #FF00FF;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.steel {
+    background-color: #C0C0C0;
+    color: white;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+#pokemon-search {
+    border: 1px solid darkblue;
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin-bottom: 2.5px;
+    border-radius: 17.5px;
+    background-color: whitesmoke;
+    outline: none;
+    font-size: 12px;
+}
+
+#search-svg {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.description-container {
+    text-align: center;
+    margin: 15px 0;
+    max-width: 72.5%;
+    background-color: red;
+}
+
+.description-container > h4 {
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+.description-container > p {
+    color: darkblue;
+}
+
+#imgPokeballDarkMode {
+    width: 40px;
+}
+
+#imgPokeballDarkMode:hover {
+    cursor: pointer;
+    animation: pokeball-xydeg 1.25s ease-in-out infinite;
+}
+
+@keyframes pokeball-xydeg {
+    100% {
+        rotate: 0deg;
+    }
+    66% {
+        rotate: 5deg;
+    }
+    33% {
+        rotate: -5deg;
+    }
+}
+
+#imgPokeballDarkMode:active {
+    transform: scale(0.925);
+}
+
+#pokeballDarkMode {
+    margin-top: auto;
+    height: 40px;
+    width: 100%;
+}
+
